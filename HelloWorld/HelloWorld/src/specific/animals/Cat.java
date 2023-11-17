@@ -1,10 +1,12 @@
-package Model;
+package specific.animals;
 
-public class Cat extends Pet{
+import Model.Pet;
+
+public class Cat extends Pet {
 
     public void bark(){
         System.out.println("Meow...");
-
+        super.protectedMethod();
     }
 
     @Override
@@ -16,5 +18,7 @@ public class Cat extends Pet{
     public static void main(String[] args) {
         Cat cat1 = new Cat();
         System.out.println(cat1);
+        cat1.bark();
+        cat1.protectedMethod();
     }
 }
